@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" color-mode = "dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>Github-user-search</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <header>
+        <div class="head">devfinder</div>
+        <div class="light-dark mode mode-name">
+            <button class="color-mode__btn light--hidden" aria-label="Toggle light mode">
+                LIGHT
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" style="fill: #a6aab3;"><path d="M12 23.3 8.65 20H4V15.35L0.7 12L4 8.65V4H8.65L12 0.7L15.35 4H20V8.65L23.3 12L20 15.35V20H15.35ZM12 18Q14.5 18 16.25 16.25Q18 14.5 18 12Q18 9.5 16.25 7.75Q14.5 6 12 6Q9.5 6 7.75 7.75Q6 9.5 6 12Q6 14.5 7.75 16.25Q9.5 18 12 18ZM12 16Q10.35 16 9.175 14.825Q8 13.65 8 12Q8 10.35 9.175 9.175Q10.35 8 12 8Q13.65 8 14.825 9.175Q16 10.35 16 12Q16 13.65 14.825 14.825Q13.65 16 12 16Z"/></svg>
+            </button>
+
+            <button class="color-mode__btn dark--hidden" aria-label="Toggle dark mode">
+                DARK
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" style="fill: #a6aab3;"><path d="M12 23.3 8.65 20H4V15.35L0.7 12L4 8.65V4H8.65L12 0.7L15.35 4H20V8.65L23.3 12L20 15.35V20H15.35ZM12 18Q14.5 18 16.25 16.25Q18 14.5 18 12Q18 9.5 16.25 7.75Q14.5 6 12 6Q11.35 6 10.7 6.125Q10.05 6.25 9.475 6.525Q11.075 7.275 12.038 8.762Q13 10.25 13 12Q13 13.75 12.038 15.238Q11.075 16.725 9.475 17.475Q10.05 17.75 10.7 17.875Q11.35 18 12 18Z"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <div class="search">
+        <div class="searchText">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" style="fill: #0079ff;"><path d="M19.6 21 13.3 14.7Q12.55 15.3 11.575 15.65Q10.6 16 9.5 16Q6.775 16 4.888 14.113Q3 12.225 3 9.5Q3 6.775 4.888 4.887Q6.775 3 9.5 3Q12.225 3 14.113 4.887Q16 6.775 16 9.5Q16 10.6 15.65 11.575Q15.3 12.55 14.7 13.3L21 19.6ZM9.5 14Q11.375 14 12.688 12.688Q14 11.375 14 9.5Q14 7.625 12.688 6.312Q11.375 5 9.5 5Q7.625 5 6.312 6.312Q5 7.625 5 9.5Q5 11.375 6.312 12.688Q7.625 14 9.5 14Z"/></svg>
+            <input type="text" name="" id="search-bar" placeholder="Search Github username...">
+        </div>
+        <div class="searchbtn">Search</div>
+    </div>
+
+    <div class="resultBody">
+        <div class="githubHead">
+            <div class="mainImg"></div>
+            <div class="githubInfo">
+                <div class="githubUser">Github Username</div>
+                <div class="githubUserName"><a href="">@githubusername</a></div>
+                <div class="githubJoinedDate">Joined Date</div>
+            </div>
+        </div>
+
+        
+        <div class="githubFact">
+            <div class="githubBio" name="txtname" rows="4" cols="50" maxlength="200" style="font-size: 14px;">Github Bio...</div>
+
+            <div class="githubRepo">
+                <div class="repo">
+                    <div class="repoHeading">Repos</div>
+                    <div class="repoTotal">0</div>
+                </div>
+
+                <div class="followers">
+                    <div class="followerHeading">Followers</div>
+                    <div class="followerTotal">0</div>
+                </div>
+
+                <div class="following">
+                    <div class="followingHeading">Following</div>
+                    <div class="followingTotal">0</div>
+                </div>
+            </div>
+
+            <div class="githubSocial">
+                <div class="location">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20"  style="fill: #a6aab3;"><path d="M10 15.917Q7.042 13.729 5.604 11.688Q4.167 9.646 4.167 7.667Q4.167 6.188 4.688 5.062Q5.208 3.938 6.052 3.188Q6.896 2.438 7.938 2.052Q8.979 1.667 10 1.667Q11.042 1.667 12.073 2.052Q13.104 2.438 13.948 3.188Q14.792 3.938 15.312 5.062Q15.833 6.188 15.833 7.667Q15.833 9.646 14.396 11.688Q12.958 13.729 10 15.917ZM10 9.25Q10.708 9.25 11.208 8.75Q11.708 8.25 11.708 7.542Q11.708 6.833 11.208 6.333Q10.708 5.833 10 5.833Q9.292 5.833 8.792 6.333Q8.292 6.833 8.292 7.542Q8.292 8.25 8.792 8.75Q9.292 9.25 10 9.25ZM4.167 18.333V16.583H15.833V18.333Z"/></svg>
+                    <p class="locations">Location</p>
+                </div>
+
+                <div class="twitter">
+                    <svg version="1.1" id="Logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  height="20" width="20" x="0px" y="0px" viewBox="0 0 248 204" style="enable-background:new 0 0 248 204;" xml:space="preserve"><style type="text/css">.st0{fill:#a6aab3;} </style><g id="Logo_1_"><path id="white_background" class="st0" d="M221.95,51.29c0.15,2.17,0.15,4.34,0.15,6.53c0,66.73-50.8,143.69-143.69,143.69v-0.04C50.97,201.51,24.1,193.65,1,178.83c3.99,0.48,8,0.72,12.02,0.73c22.74,0.02,44.83-7.61,62.72-21.66c-21.61-0.41-40.56-14.5-47.18-35.07c7.57,1.46,15.37,1.16,22.8-0.87C27.8,117.2,10.85,96.5,10.85,72.46c0-0.22,0-0.43,0-0.64c7.02,3.91,14.88,6.08,22.92,6.32C11.58,63.31,4.74,33.79,18.14,10.71c25.64,31.55,63.47,50.73,104.08,52.76c-4.07-17.54,1.49-35.92,14.61-48.25c20.34-19.12,52.33-18.14,71.45,2.19c11.31-2.23,22.15-6.38,32.07-12.26c-3.77,11.69-11.66,21.62-22.2,27.93c10.01-1.18,19.79-3.86,29-7.95C240.37,35.29,231.83,44.14,221.95,51.29z"/></g></svg>
+                    <p class="twit">Twitter</p>
+                </div>
+
+                <div class="website">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" style="fill: #a6aab3;"><path d="M10 18.333Q8.292 18.333 6.771 17.677Q5.25 17.021 4.115 15.885Q2.979 14.75 2.323 13.229Q1.667 11.708 1.667 10Q1.667 8.271 2.323 6.76Q2.979 5.25 4.115 4.115Q5.25 2.979 6.771 2.323Q8.292 1.667 10 1.667Q11.729 1.667 13.24 2.323Q14.75 2.979 15.885 4.115Q17.021 5.25 17.677 6.76Q18.333 8.271 18.333 10Q18.333 11.708 17.677 13.229Q17.021 14.75 15.885 15.885Q14.75 17.021 13.24 17.677Q11.729 18.333 10 18.333ZM13.312 6.646H15.667Q15.062 5.646 14.188 4.906Q13.312 4.167 12.25 3.812Q12.604 4.438 12.875 5.167Q13.146 5.896 13.312 6.646ZM8.5 6.646H11.5Q11.271 5.771 10.896 4.948Q10.521 4.125 10 3.396Q9.479 4.188 9.104 5Q8.729 5.812 8.5 6.646ZM3.604 11.583H6.354Q6.312 11.167 6.281 10.771Q6.25 10.375 6.25 9.979Q6.25 9.604 6.281 9.208Q6.312 8.812 6.354 8.396H3.604Q3.5 8.875 3.458 9.26Q3.417 9.646 3.417 10Q3.417 10.354 3.458 10.729Q3.5 11.104 3.604 11.583ZM7.75 16.188Q7.417 15.583 7.146 14.854Q6.875 14.125 6.708 13.333H4.354Q4.917 14.333 5.792 15.062Q6.667 15.792 7.75 16.188ZM4.354 6.646H6.708Q6.896 5.854 7.156 5.135Q7.417 4.417 7.75 3.812Q6.688 4.167 5.812 4.906Q4.938 5.646 4.354 6.646ZM10 16.583Q10.521 15.854 10.896 15.031Q11.271 14.208 11.5 13.333H8.5Q8.729 14.167 9.104 14.979Q9.479 15.792 10 16.583ZM8.104 11.583H11.896Q11.958 11.042 11.99 10.677Q12.021 10.312 12.021 9.979Q12.021 9.667 11.99 9.302Q11.958 8.938 11.896 8.396H8.104Q8.062 8.812 8.031 9.208Q8 9.604 8 9.979Q8 10.375 8.031 10.771Q8.062 11.167 8.104 11.583ZM12.25 16.188Q13.333 15.792 14.219 15.062Q15.104 14.333 15.667 13.333H13.312Q13.146 14.083 12.875 14.812Q12.604 15.542 12.25 16.188ZM13.646 11.583H16.396Q16.5 11.208 16.542 10.812Q16.583 10.417 16.583 9.979Q16.583 9.562 16.542 9.167Q16.5 8.771 16.396 8.396H13.646Q13.708 8.938 13.74 9.302Q13.771 9.667 13.771 9.979Q13.771 10.312 13.74 10.677Q13.708 11.042 13.646 11.583Z"/></svg>
+                    <p class="websites">Website</p>
+                </div>
+
+                <div class="company">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" style="fill: #a6aab3;"><path d="M2.5 17.5V5.812H5.812V2.5H14.188V9.125H17.5V17.5H10.875V14.188H9.125V17.5ZM4.25 15.75H5.812V14.188H4.25ZM4.25 12.438H5.812V10.875H4.25ZM4.25 9.125H5.812V7.562H4.25ZM7.562 12.438H9.125V10.875H7.562ZM7.562 9.125H9.125V7.562H7.562ZM7.562 5.812H9.125V4.25H7.562ZM10.875 12.438H12.438V10.875H10.875ZM10.875 9.125H12.438V7.562H10.875ZM10.875 5.812H12.438V4.25H10.875ZM14.188 15.75H15.75V14.188H14.188ZM14.188 12.438H15.75V10.875H14.188Z"/></svg>
+                    <p class="companies">Company</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
